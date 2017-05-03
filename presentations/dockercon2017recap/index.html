@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Dockercon 2017 Recap</title>
+  <meta charset="utf-8">
+  <style>
+    @import url(https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz);
+    @import url(https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic);
+    @import url(https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700,400italic);
+
+    body {
+      font-family: 'Droid Serif';
+      line-height: 3em;
+    }
+
+    h1,
+    h2,
+    h3 {
+      font-family: 'Yanone Kaffeesatz';
+      font-weight: normal;
+    }
+
+    .remark-code,
+    .remark-inline-code {
+      font-family: 'Ubuntu Mono';
+    }
+
+    .orange {
+      color: orange
+    }
+  </style>
+</head>
+
+<body>
+  <textarea id="source">
+
+class: center, middle
+
+![:scale 80%](docker.png)
+# Dockercon 2017 Recap
+Ryan Lee &amp; Scott Nowicki
+
+---
+
+# .orange[Agenda]
+
+ - Docker review
+ - Docker, Inc.
+ - Docker and Windows
+ - SwarmKit
+ - LinuxKit
+ - InfraKit
+ - Docker Enterprise
+ - Legacy Apps/MTA
+ - FaaS
+ - You!
+
+---
+
+# .orange[Docker]
+  - What do you know about Docker?
+  - Increased performance, density, security, scale speed, and lowered barriers to entry
+
+---
+
+# .orange[Docker, Inc.]
+  - History of stewardship (gifting projects to the community while providing support)
+  - Listens to feedback
+  - Plays nice with other tech
+  - Focus on creating a common language for "the cloud"
+  - Uses market share and community support to sell Enterprise offerings
+
+---
+
+# .orange[Docker and Windows]
+ - Windows 10/Server 2016
+ - Switch between running Windows and Linux containers
+ - HyperV Isolation
+
+---
+
+![:scale 100%](docker_components.jpg)
+
+---
+
+# .orange[SwarmKit]
+  - Simple, scalable orchestration (1 node to 10,000)
+  - Uses same definition for local dev as prod
+  - Rolling upgrades, rollback, etc.
+  - Mixed Windows/Linux clusters
+  - MTLS encrypted by default
+  - DC/OS, Kubernetes
+
+---
+
+# .orange[LinuxKit]
+  - Docker principle applied to operating systems
+  - Ship the smallest OS possible (only what you need)
+  - Packer, CoreOS
+  - Many output artifacts
+---
+
+# .orange[InfraKit]
+  - Manage baseline infrastructure to create Docker environments
+  - Terraform, ARM Templates
+  - Moby tool to integrate all
+
+---
+
+# .orange[Docker Enterprise]
+  - What if we want RBAC?
+  - Automated security policies?
+  - Complex cluster management?
+  - All in one GUI
+  - $$$
+
+---
+
+# .orange[Legacy Apps/MTA]
+  - Legacy monoliths _can_ be containerized
+  - Encryption, portability, density
+  - Modernize Traditional Apps (12 factor theater)
+
+---
+
+# .orange[FaaS]
+  - Completely platform agnostic
+  - Lambda/Azure Functions/Service Fabric-esque
+  - Integrated scaling based on advanced performance/app metrics
+  - All benefits of Docker, Swarm
+
+---
+
+# .orange[You!]
+  - AHHHHHH SO MANY COMPONENTS
+  - What's next?
+  - Start here: https://docs.docker.com/get-started/
+  - Free fully functional Docker nodes with training plan: http://training.play-with-docker.com/
+  - Advanced orchestration, monitoring, deep dive: http://bretfisher.com/dockercon17/
+
+
+    </textarea>
+  <script src="https://remarkjs.com/downloads/remark-latest.min.js">
+  </script>
+  <script>
+    remark.macros.scale = function(percentage) {
+      var url = this;
+      return '<img src="' + url + '" style="width: ' + percentage + '" />';
+    };
+    var slideshow = remark.create();
+  </script>
+</body>
+
+</html>
